@@ -1,0 +1,28 @@
+{
+    "category": "plugins",
+    "display": "Add Style To Element",
+    "fields": {
+        "AAn": {
+            "caption": "Element ID",
+            "doc": "ID",
+            "editor": "StaticText",
+            "name": "element_id",
+            "rank": 0
+        },
+        "AAo": {
+            "caption": "Property",
+            "doc": "Property name",
+            "editor": "StaticText",
+            "name": "property",
+            "rank": 1
+        },
+        "AAp": {
+            "caption": "Value",
+            "doc": "Value",
+            "editor": "StaticText",
+            "name": "value",
+            "rank": 2
+        }
+    },
+    "type": "client_side"
+}

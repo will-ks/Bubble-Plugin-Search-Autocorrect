@@ -1,0 +1,201 @@
+{
+    "add_is_visible": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 32,
+        "width": 32
+    },
+    "display": "Search & Autocorrect",
+    "edit_mode_image": "//s3.amazonaws.com/appforest_uf/f1515624345007x908627360127866200/search%20%281%29.png",
+    "fields": {
+        "AAL": {
+            "caption": "Data Type",
+            "doc": "App data type",
+            "editor": "custom_type",
+            "name": "app_data",
+            "rank": 0
+        },
+        "AAM": {
+            "caption": "Field To Search 1",
+            "doc": "Field to search",
+            "editor": "custom_field_AAL",
+            "field_type_restriction": "text_image_file",
+            "name": "search_field",
+            "rank": 2
+        },
+        "AAN": {
+            "caption": "Data Source",
+            "doc": "Data source",
+            "editor": "DynamicValue",
+            "is_list": true,
+            "name": "data_source",
+            "rank": 1,
+            "value": "custom_data_AAL"
+        },
+        "AAP": {
+            "caption": "Text To Match",
+            "doc": "String to match to dictionary",
+            "editor": "DynamicValue",
+            "name": "string_to_match",
+            "optional": true,
+            "rank": 7,
+            "value": "text"
+        },
+        "AAS": {
+            "caption": "___ Options ___",
+            "editor": "Label",
+            "name": "options",
+            "rank": 11
+        },
+        "AAT": {
+            "caption": "Threshold",
+            "default_val": 0.6,
+            "doc": "At what point does the match algorithm give up. A threshold of 0.0 requires a perfect match (of both letters and location), a threshold of 1.0 would match anything.",
+            "editor": "StaticNumber",
+            "name": "threshold",
+            "rank": 12
+        },
+        "AAU": {
+            "caption": "A threshold of 0.0 requires a perfect match (of both letters and location), a threshold of 1.0 would match anything.",
+            "editor": "Label",
+            "name": "threshold_info",
+            "rank": 13
+        },
+        "AAV": {
+            "caption": "Case Sensitive",
+            "default_val": false,
+            "doc": "Case sensitivity",
+            "editor": "Checkbox",
+            "name": "case_sensitive",
+            "rank": 14
+        },
+        "ABM": {
+            "caption": "___ Advanced Options ___",
+            "editor": "Label",
+            "name": "advanced_options",
+            "rank": 15
+        },
+        "ABN": {
+            "caption": "Tokenize",
+            "default_val": false,
+            "doc": "When true, the algorithm will search individual words and the full string, computing the final score as a function of both. In this case, the threshold, distance, and location are inconsequential for individual tokens, and are thus ignored.",
+            "editor": "Checkbox",
+            "name": "tokenize",
+            "rank": 16
+        },
+        "ABP": {
+            "caption": "Match All Tokens",
+            "default_val": false,
+            "doc": "When true, the result set will only include records that match all tokens. Will only work if tokenize is also true.",
+            "editor": "Checkbox",
+            "name": "match_all_tokens",
+            "rank": 17
+        },
+        "ABR": {
+            "caption": "Find All Matches",
+            "default_val": true,
+            "doc": "When true, the matching function will continue to the end of a search pattern even if a perfect match has already been located in the string.",
+            "editor": "Checkbox",
+            "name": "find_all_matches",
+            "rank": 18
+        },
+        "ABS": {
+            "caption": "Location",
+            "default_val": 0,
+            "doc": "Determines approximately where in the text is the pattern expected to be found.",
+            "editor": "StaticNumber",
+            "name": "location",
+            "rank": 19
+        },
+        "ABT": {
+            "caption": "Distance",
+            "default_val": 100,
+            "doc": "Determines how close the match must be to the fuzzy location (specified by location). An exact letter match which is distance characters away from the fuzzy location would score as a complete mismatch. A distance of 0 requires the match be at the exact location specified, a distance of 1000 would require a perfect match to be within 800 characters of the location to be found using a threshold of 0.8.",
+            "editor": "StaticNumber",
+            "name": "distance",
+            "rank": 20
+        },
+        "ABU": {
+            "caption": "Match Pattern Length",
+            "default_val": 32,
+            "doc": "The maximum length of the pattern. The longer the pattern (i.e. the search query), the more intensive the search operation will be. Whenever the pattern exceeds the maxPatternLength, an error will be thrown. Don't set it too high, for performance purposes.",
+            "editor": "StaticNumber",
+            "name": "match_pattern_length",
+            "rank": 21
+        },
+        "ABW": {
+            "caption": "Field To Search 2",
+            "doc": "Field to search 2",
+            "editor": "custom_field_AAL",
+            "field_type_restriction": "text_image_file",
+            "name": "search_field_2",
+            "optional": true,
+            "rank": 3
+        },
+        "ABY": {
+            "caption": "Field To Search 3",
+            "doc": "Field to search 3",
+            "editor": "custom_field_AAL",
+            "field_type_restriction": "text_image_file",
+            "name": "search_field_3",
+            "optional": true,
+            "rank": 4
+        },
+        "ABZ": {
+            "caption": "Field To Search 4",
+            "doc": "Field to search 4",
+            "editor": "custom_field_AAL",
+            "field_type_restriction": "text_image_file",
+            "name": "search_field_4",
+            "optional": true,
+            "rank": 5
+        },
+        "ABa": {
+            "caption": "OR Set Text to Match from an Input Box",
+            "default_val": false,
+            "doc": "Check for fast updates from an Input Box value. Input Box should have ID Attribute set to \"SearchInput\". See documentation for more info.",
+            "editor": "Checkbox",
+            "name": "search_type",
+            "rank": 8
+        },
+        "ABb": {
+            "caption": "Check for fast updates from an Input Box value. Make sure you set the Input Box ID value below. See documentation for more info.",
+            "editor": "Label",
+            "name": "search_type_info",
+            "rank": 9
+        },
+        "ABc": {
+            "caption": "Field To Search 5",
+            "doc": "Field to search 5",
+            "editor": "custom_field_AAL",
+            "field_type_restriction": "text_image_file",
+            "name": "search_field_5",
+            "optional": true,
+            "rank": 6
+        },
+        "ABd": {
+            "caption": "Input Box ID",
+            "editor": "StaticText",
+            "name": "input_box_id",
+            "optional": true,
+            "rank": 10
+        }
+    },
+    "icon": "ion-ios-search-strong",
+    "states": {
+        "ABK": {
+            "caption": "Matches",
+            "doc": "Things matched",
+            "is_list": true,
+            "name": "match_array",
+            "value": "custom_data_AAL"
+        },
+        "ABL": {
+            "caption": "Match Scores",
+            "doc": "Match scores from 0 to 1, 0 is perfect match.",
+            "is_list": true,
+            "name": "match_scores_array",
+            "value": "number"
+        }
+    }
+}

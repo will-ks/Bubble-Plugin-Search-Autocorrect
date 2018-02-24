@@ -1,0 +1,14 @@
+{
+    "category": "plugins",
+    "display": "Make Element Visible",
+    "fields": {
+        "AAl": {
+            "caption": "Element ID",
+            "doc": "Element ID to make visible",
+            "editor": "StaticText",
+            "name": "element_id",
+            "rank": 0
+        }
+    },
+    "type": "client_side"
+}

@@ -1,0 +1,39 @@
+{
+    "assets": {
+        "AAD": {
+            "name": "fittext",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1513016515403x113612895132973800/jquery.fittext.js"
+        },
+        "AAO": {
+            "name": "fuse",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1513111916188x514012048952281500/fuse.min.js"
+        },
+        "AAX": {
+            "name": "waypoint",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1513118057526x986734658014029300/jquery.waypoints.min.js"
+        },
+        "AAY": {
+            "name": "isvisible",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1513119127546x768232103902846600/jquery.visible.min.js"
+        },
+        "AAv": {
+            "name": "in-view",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1513363062221x138670728076249360/in-view.min.js"
+        },
+        "ABG": {
+            "name": "verge",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1513366995344x794547675875946900/verge.min.js"
+        },
+        "ABI": {
+            "name": "pace",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1514045743006x492472880519926500/pace.min.js"
+        },
+        "ABJ": {
+            "name": "pacetheme1",
+            "url": "//dd7tel2830j4w.cloudfront.net/f1514045758936x390627816086635000/pace-theme-bounce.css"
+        }
+    },
+    "dependencies": {
+        "use_jquery": true
+    }
+}

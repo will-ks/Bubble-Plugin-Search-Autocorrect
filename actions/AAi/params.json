@@ -1,0 +1,14 @@
+{
+    "category": "plugins",
+    "display": "Make Element Invisible",
+    "fields": {
+        "AAj": {
+            "caption": "Element ID",
+            "doc": "ID of element to make invisible",
+            "editor": "StaticText",
+            "name": "element_id",
+            "rank": 0
+        }
+    },
+    "type": "client_side"
+}
