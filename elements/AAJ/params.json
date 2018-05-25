@@ -179,6 +179,14 @@
             "name": "input_box_id",
             "optional": true,
             "rank": 10
+        },
+        "ABe": {
+            "caption": "Exclude Terms Under",
+            "default_val": 2,
+            "doc": "Exclude search terms under a certain length",
+            "editor": "StaticNumber",
+            "name": "exclude_under",
+            "rank": 22
         }
     },
     "icon": "ion-ios-search-strong",
