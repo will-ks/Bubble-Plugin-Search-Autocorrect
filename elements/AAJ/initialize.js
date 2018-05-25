@@ -39,8 +39,14 @@ function(instance, context) {
 
              if (instance.data.dictionary && instance.data.options) {
 
+                 // Trim leading & trailing whitespace, then remove words shorter than exclude_under value
+                 var searchTerm = $("#" + instance.data.input_box_id).val().trim();
+                 searchTerm = searchTerm.split(' ').filter(function(str) {
+                   var word = str.match(/(\w+)/);
+                   return word && word[0].length >= instance.data.exclude_under;
+                   }).join(' ');
                  var fuse = new Fuse(instance.data.dictionary, instance.data.options);
-                 result = fuse.search($("#" + instance.data.input_box_id).val());
+                 result = fuse.search(searchTerm);
                  getResults();
              } else {
                  console.log("Search & Autocorrect: Instance variables not declared");

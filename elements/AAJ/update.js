@@ -6,6 +6,7 @@ function(instance, properties, context) {
     instance.data.string_to_match = properties.string_to_match;
     instance.data.dictionary = [];
     instance.data.input_box_id = properties.input_box_id;
+    instance.data.exclude_under = properties.exclude_under;
 
 
 
@@ -116,8 +117,15 @@ function(instance, properties, context) {
 
           if (!properties.search_type && properties.string_to_match) {
             
+            // Trim leading & trailing whitespace, then remove words shorter than exclude_under value
+            var searchTerm = properties.string_to_match.trim();
+            searchTerm = searchTerm.split(' ').filter(function(str) {
+              var word = str.match(/(\w+)/);
+              return word && word[0].length >= instance.data.exclude_under;
+            }).join(' ');
+            
             var fuse = new Fuse(instance.data.dictionary, instance.data.options);
-            result = fuse.search(properties.string_to_match);
+            result = fuse.search(searchTerm);
             getResults();
             
           } else if (!properties.search_type && !properties.string_to_match) {
