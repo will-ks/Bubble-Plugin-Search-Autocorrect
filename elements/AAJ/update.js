@@ -63,7 +63,7 @@ function(instance, properties, context) {
         makearray();
     }
 
-  
+
     // Load fuse.js options
 
     instance.data.options = {
@@ -82,16 +82,16 @@ function(instance, properties, context) {
 
 
 
-  
-      var result;
-  
-   // getResults function, same as in function initialize. Here it runs if the user has set a "Text To Match" value, on update.
-  
+
+    var result;
+
+    // getResults function, same as in function initialize. Here it runs if the user has set a "Text To Match" value, on update.
+
     function getResults() {
         // Check that result exists and is not empty before attempting to set properties to avoid errors. Reset matched states to null when no matches found
 
         if (result && result.length) {
-          
+
             var resultsArray = [];
             var scoresArray = [];
 
@@ -110,29 +110,28 @@ function(instance, properties, context) {
         }
 
     }
-  
-  
-  
-  // Run getResults if string_to_match is set and the "use #SearchInput" checkbox is not checked
 
-          if (!properties.search_type && properties.string_to_match) {
-            
-            // Trim leading & trailing whitespace, then remove words shorter than exclude_under value
-            var searchTerm = properties.string_to_match.trim();
-            searchTerm = searchTerm.split(' ').filter(function(str) {
-              var word = str.match(/(\w+)/);
-              return word && word[0].length >= instance.data.exclude_under;
-            }).join(' ');
-            
-            var fuse = new Fuse(instance.data.dictionary, instance.data.options);
-            result = fuse.search(searchTerm);
-            getResults();
-            
-          } else if (!properties.search_type && !properties.string_to_match) {
-             instance.publishState("match_array", null);
-             instance.publishState("match_scores_array", null); 
-        }
-       
+
+
+    // Run getResults if string_to_match is set and the "use #SearchInput" checkbox is not checked
+
+    if (!properties.search_type && properties.string_to_match) {
+
+        // Trim leading & trailing whitespace, then remove words shorter than exclude_under value
+        var searchTerm = properties.string_to_match.trim();
+        searchTerm = searchTerm.split(' ').filter(function(str) {
+            var word = str.match(/(\w+)/);
+            return word && word[0].length >= instance.data.exclude_under;
+        }).join(' ');
+
+        var fuse = new Fuse(instance.data.dictionary, instance.data.options);
+        result = fuse.search(searchTerm);
+        getResults();
+
+    } else if (!properties.search_type && !properties.string_to_match) {
+        instance.publishState("match_array", null);
+        instance.publishState("match_scores_array", null);
+    }
 
 
 

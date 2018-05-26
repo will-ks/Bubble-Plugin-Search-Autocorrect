@@ -8,7 +8,7 @@ function(instance, context) {
         // Check that result exists and is not empty before attempting to set properties to avoid errors. Reset matched states to null when no matches found
 
         if (result && result.length) {
-          
+
             var resultsArray = [];
             var scoresArray = [];
 
@@ -31,31 +31,31 @@ function(instance, context) {
 
     // Bind input change handler to #SearchInput. Run getResults function whenever input changes.
 
-  
-  $(document).ready(function() {
-     if (instance.data.input_box_id) {
 
-         $("#" + instance.data.input_box_id).on("input", null, null, function() {
+    $(document).ready(function() {
+        if (instance.data.input_box_id) {
 
-             if (instance.data.dictionary && instance.data.options) {
+            $("#" + instance.data.input_box_id).on("input", null, null, function() {
 
-                 // Trim leading & trailing whitespace, then remove words shorter than exclude_under value
-                 var searchTerm = $("#" + instance.data.input_box_id).val().trim();
-                 searchTerm = searchTerm.split(' ').filter(function(str) {
-                   var word = str.match(/(\w+)/);
-                   return word && word[0].length >= instance.data.exclude_under;
-                   }).join(' ');
-                 var fuse = new Fuse(instance.data.dictionary, instance.data.options);
-                 result = fuse.search(searchTerm);
-                 getResults();
-             } else {
-                 console.log("Search & Autocorrect: Instance variables not declared");
-             }
-         });
+                if (instance.data.dictionary && instance.data.options) {
 
-     }
+                    // Trim leading & trailing whitespace, then remove words shorter than exclude_under value
+                    var searchTerm = $("#" + instance.data.input_box_id).val().trim();
+                    searchTerm = searchTerm.split(' ').filter(function(str) {
+                        var word = str.match(/(\w+)/);
+                        return word && word[0].length >= instance.data.exclude_under;
+                    }).join(' ');
+                    var fuse = new Fuse(instance.data.dictionary, instance.data.options);
+                    result = fuse.search(searchTerm);
+                    getResults();
+                } else {
+                    console.log("Search & Autocorrect: Instance variables not declared");
+                }
+            });
 
- });
+        }
+
+    });
 
 
 
