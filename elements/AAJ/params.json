@@ -116,7 +116,7 @@
             "rank": 20
         },
         "ABU": {
-            "caption": "Match Pattern Length",
+            "caption": "Max Pattern Length",
             "default_val": 32,
             "doc": "The maximum length of the pattern. The longer the pattern (i.e. the search query), the more intensive the search operation will be. Whenever the pattern exceeds the maxPatternLength, an error will be thrown. Don't set it too high, for performance purposes.",
             "editor": "StaticNumber",

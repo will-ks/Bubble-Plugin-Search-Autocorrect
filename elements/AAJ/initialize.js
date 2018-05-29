@@ -45,6 +45,7 @@ function(instance, context) {
                         var word = str.match(/(\w+)/);
                         return word && word[0].length >= instance.data.exclude_under;
                     }).join(' ');
+                  
                     var fuse = new Fuse(instance.data.dictionary, instance.data.options);
                     result = fuse.search(searchTerm);
                     getResults();
