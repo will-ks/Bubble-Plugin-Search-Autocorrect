@@ -33,7 +33,7 @@ function(instance, context) {
 
 
     $(document).ready(function() {
-        if (instance.data.input_box_id) {
+        if (instance.data.input_box_id && instance.data.search_type) {
 
             $("#" + instance.data.input_box_id).on("input", null, null, function() {
 
@@ -52,6 +52,8 @@ function(instance, context) {
                 } else {
                     console.log("Search & Autocorrect: Instance variables not declared");
                 }
+              
+              instance.publishState('input_box_value', $("#" + instance.data.input_box_id).val());
             });
 
         }

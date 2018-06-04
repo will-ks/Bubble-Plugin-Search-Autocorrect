@@ -1,0 +1,12 @@
+{
+    "caption": "Reset input",
+    "doc": "Reset inputs",
+    "fields": {
+        "ABh": {
+            "caption": "Note: Input box ID must be set in plugin properties for this to work, even if you're not using \"Set Text to Match from an Input Box\" feature.",
+            "editor": "Label",
+            "name": "info",
+            "rank": 0
+        }
+    }
+}

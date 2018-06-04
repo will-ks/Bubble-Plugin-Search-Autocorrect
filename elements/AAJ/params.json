@@ -188,6 +188,7 @@
             "rank": 22
         }
     },
+    "has_reset_fn": false,
     "icon": "ion-ios-search-strong",
     "states": {
         "ABK": {
@@ -203,6 +204,14 @@
             "is_list": true,
             "name": "match_scores_array",
             "value": "number"
+        },
+        "ABi": {
+            "caption": "Input Box's Value",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "input_box_value",
+            "value": "text"
         }
     }
 }

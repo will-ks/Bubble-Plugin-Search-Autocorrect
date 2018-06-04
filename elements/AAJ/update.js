@@ -7,6 +7,7 @@ function(instance, properties, context) {
     instance.data.dictionary = [];
     instance.data.input_box_id = properties.input_box_id;
     instance.data.exclude_under = properties.exclude_under;
+    instance.data.search_type = properties.search_type;
 
 
 
