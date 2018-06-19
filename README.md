@@ -1,3 +1,7 @@
-This is a repository based on the [Bubble](https://bubble.is) plugin 'Search & Autocorrect'. This lets you use Github's functionality in terms of version control, forks and pull requests. Note that the the plugin code is stored on Bubble's servers, and you need to synchronize your repository in the Bubble Plugin Editor. 
+A fuzzy search plugin for [Bubble applications](https://bubble.is).
 
- This plugin can be used in [Bubble applications](https://bubble.is).
+Add fuzzy searching to a search box to handle typos and other errors, within-word searches and more. Or build your own fast, live search dropdown searching through multiple fields.
+
+Uses [Fuse.js](http://fusejs.io/)
+
+This plugin can be used in [Bubble applications](https://bubble.is).
