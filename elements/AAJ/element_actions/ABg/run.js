@@ -7,6 +7,7 @@ function(instance, properties, context) {
       $("#" + instance.data.input_box_id).val('');
       instance.publishState('match_array', null);
       instance.publishState('match_scores_array', null);
+      instance.publishState('input_box_value', null);
     
     }
 
