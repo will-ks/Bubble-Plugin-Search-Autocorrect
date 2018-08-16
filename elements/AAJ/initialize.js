@@ -53,6 +53,7 @@ function(instance, context) {
                     console.log("Search & Autocorrect: Instance variables not declared");
                 }
               
+              // Publish the input box's value to the input_box_value state
               instance.publishState('input_box_value', $("#" + instance.data.input_box_id).val());
             });
 

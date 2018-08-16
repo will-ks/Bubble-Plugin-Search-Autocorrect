@@ -207,6 +207,7 @@
         },
         "ABi": {
             "caption": "Input Box's Value",
+            "doc": "Value of input box from ID",
             "initialization_code": {
                 "fn": "function(properties, context) {\n\n\n\n}"
             },
